@@ -20,3 +20,24 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+    
+    // Smooth scroll to top when clicked
+    scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
