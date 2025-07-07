@@ -1,5 +1,5 @@
    :root {
-            --primary: #ff7eb9;
+            --primary: #52384d;
             --secondary: #ff65a3;
             --accent: #7afcff;
             --light: #fff9fb;
@@ -156,5 +156,28 @@
             h1 {
                 font-size: 2rem;
             }
+
+        @media (max-width: 480px) {
+                .gallery-container {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 1rem;
+                }
+                
+                h1 {
+                    font-size: 2rem;
+                }
+
+                .tabs {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap:nowrap;
+                    gap: 0.5rem;
+                    margin: 1rem 0;
+                }
+                .subtitle {
+                    font-size: 0.9rem;
+                    opacity: 0.9;
+                }
+
         }
-   
+    }
